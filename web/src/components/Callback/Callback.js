@@ -12,7 +12,7 @@ const Callback = () => {
     }).catch((error) => {
       console.error('Error logging in:', error)
     })
-  }, [logIn])
+  }, [loginWithPopup])
   return <div>Logging in...</div>
 }
 
