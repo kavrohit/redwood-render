@@ -3,18 +3,15 @@ import { useAuth } from "src/auth";
 
 
 const Callback = () => {
-  const {loading,isAuthenticated} = useAuth();
-  if(loading){
-    return(
-      <div>Loading ...</div>
-    )
-  }
-  if(!isAuthenticated){
-    return <Redirect to="/" />
-  }
-  return (
-    <div>Something went Wrong</div>
-  )
+  const {logIn} = useAuth();
+
+  useEffect(() => {
+    logIn().then(() => {
+      navigate('/')
+    })
+  }, [logIn])
+
+  return <div>Logging in...</div>
 }
 
 export default Callback
