@@ -1,16 +1,16 @@
 import { useAuth } from "src/auth";
 import { useEffect } from "react";
+import { navigate } from '@redwoodjs/router'
 import Profile from "../Profile/Profile";
 const Callback = () => {
-  const {logIn,isAuthenticated,userMetadata} = useAuth();
-  if(!isAuthenticated){
-    return <div>Logging in...</div>
-  }
-  return(
-    <div>
-      {isAuthenticated && <Profile/>}
-    </div>
-  )
+  const { logIn } = useAuth()
+
+  useEffect(() => {
+    logIn().then(() => {
+      navigate('/')
+    })
+  }, [logIn])
+  return <div>Logging in...</div>
 }
 
 export default Callback
