@@ -7,7 +7,7 @@ const Callback = () => {
     logIn().then(() => {
       navigate('/')
     })
-  }, [logIn])
+  }, [])
 
   return <div>Logging in...</div>
 }
