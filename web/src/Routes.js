@@ -10,7 +10,7 @@ const Routes = () => {
   return (
     <Router useAuth={useAuth}>
       <Route path= "/" page = {HomePage} name="home"/>
-      <Route path= "/auth/callback" page = {Callback} name ="callback"/>
+      {/* <Route path= "/auth/callback" page = {Callback} name ="callback"/> */}
       <Route notfound page={NotFoundPage} />
     </Router>
   )
