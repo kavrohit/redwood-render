@@ -11,7 +11,7 @@ const Callback = () => {
     }).catch((error) => {
       console.error('Error logging in:', error)
     })
-  }, [logIn])
+  }, [])
 
   return <div>Logging in...</div>
 }
