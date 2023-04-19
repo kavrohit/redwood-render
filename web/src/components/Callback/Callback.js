@@ -2,17 +2,16 @@ import { useAuth } from "src/auth";
 import { useEffect } from "react";
 import { navigate } from '@redwoodjs/router'
 const Callback = () => {
-  const {loginWithPopup} = useAuth()
-
+  const {logIn} = useAuth()
   useEffect(() => {
     console.log('Auth0CallbackPage loaded')
-    loginWithPopup().then(() => {
+    logIn().then(() => {
       console.log('User logged in')
       navigate('/')
     }).catch((error) => {
       console.error('Error logging in:', error)
     })
-  }, [loginWithPopup])
+  }, [])
   return <div>Logging in...</div>
 }
 
