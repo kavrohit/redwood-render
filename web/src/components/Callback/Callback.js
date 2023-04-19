@@ -9,7 +9,7 @@ const Callback = () => {
     }else{
       logIn();
     }
-  }, [isAuthenticated,logIn])
+  }, [])
   return <div>Logging in...</div>
 }
 
