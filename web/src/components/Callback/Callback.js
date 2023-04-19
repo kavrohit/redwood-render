@@ -1,19 +1,16 @@
 import { useAuth } from "src/auth";
 import { useEffect } from "react";
+import Profile from "../Profile/Profile";
 const Callback = () => {
-  const {logIn} = useAuth();
-
-  useEffect(() => {
-    console.log('Auth0CallbackPage loaded')
-    logIn().then(() => {
-      console.log('User logged in')
-      navigate('/')
-    }).catch((error) => {
-      console.error('Error logging in:', error)
-    })
-  }, [])
-
-  return <div>Logging in...</div>
+  const {logIn,isAuthenticated,userMetadata} = useAuth();
+  if(!isAuthenticated){
+    return <div>Logging in...</div>
+  }
+  return(
+    <div>
+      {isAuthenticated && <Profile/>}
+    </div>
+  )
 }
 
 export default Callback
