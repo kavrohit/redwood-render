@@ -14,7 +14,7 @@ const Callback = () => {
         console.log('user is logged in')
         navigate('/')
       }
-  },[])
+  },[isAuthenticated])
   return <div>Logging in...</div>
 }
 
