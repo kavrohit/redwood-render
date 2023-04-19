@@ -1,7 +1,5 @@
-import { Redirect } from "@redwoodjs/router";
 import { useAuth } from "src/auth";
-
-
+import { useEffect } from "react";
 const Callback = () => {
   const {logIn} = useAuth();
 

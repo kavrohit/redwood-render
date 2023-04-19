@@ -7,7 +7,6 @@ const Profile = () => {
   }
   console.log({userMetadata})
   return (
-    
     <div>
       <h1>{userMetadata.name}</h1>
       <p>Email:{userMetadata.email}</p>
