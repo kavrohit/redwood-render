@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage/HomePage'
 import { Router, Route } from '@redwoodjs/router'
 
 import { useAuth } from './auth'
-import Callback from './components/Callback/Callback'
 
 const Routes = () => {
   return (
