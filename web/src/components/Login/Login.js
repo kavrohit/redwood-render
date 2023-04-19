@@ -4,7 +4,7 @@ const Login = () => {
   const {logIn,logOut,isAuthenticated} = useAuth();
   
   const handleLogin = async () =>{
-    await logIn({redirect:'/'})
+    await logIn();
   }
 
   return (

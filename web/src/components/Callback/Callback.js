@@ -9,7 +9,7 @@ const Callback = () => {
       logUser();
     }
       const logUser = async () =>{
-        console.log()
+        console.log('going to login the user')
         await logIn();
         console.log('user is logged in')
         navigate('/')
