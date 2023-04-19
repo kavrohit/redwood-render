@@ -4,12 +4,14 @@ import { navigate } from '@redwoodjs/router'
 const Callback = () => {
   const {logIn,isAuthenticated} = useAuth()
   useEffect(() => {
-    if(isAuthenticated){
-      navigate('/')
-    }else{
-      logIn();
-    }
-  }, [])
+      const logUser = async () =>{
+        await logIn();
+        navigate('/')
+      }
+      if(!isAuthenticated){
+        logUser();
+      }
+  },[])
   return <div>Logging in...</div>
 }
 
