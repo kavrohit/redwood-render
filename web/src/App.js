@@ -12,9 +12,9 @@ const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <AuthProvider>
-        <RedwoodApolloProvider useAuth={useAuth}>
+        {/* <RedwoodApolloProvider useAuth={useAuth}> */}
           <Routes />
-        </RedwoodApolloProvider>
+        {/* </RedwoodApolloProvider> */}
       </AuthProvider>
     </RedwoodProvider>
   </FatalErrorBoundary>
