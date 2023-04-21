@@ -6,6 +6,7 @@ const auth0 = new Auth0Client({
   domain: process.env.AUTH0_DOMAIN || '',
   client_id: process.env.AUTH0_CLIENT_ID || '',
   redirect_uri: process.env.AUTH0_REDIRECT_URI,
+  api_secret_key: process.env.AUTH0_SECRET,
 
   // Storing tokens in the browser's local storage provides persistence across page refreshes and browser tabs.
   // But if an attacker can run JavaScript in your SPA using a cross-site scripting (XSS) attack,

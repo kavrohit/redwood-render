@@ -1,7 +1,7 @@
 import { useAuth } from 'src/auth'
 
 const Profile = () => {
-  const { currentUser, userMetadata, loading } = useAuth()
+  const { currentUser, userMetadata, loading,hasRole } = useAuth()
   if (loading) {
     return null
   }

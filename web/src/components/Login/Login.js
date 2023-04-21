@@ -6,10 +6,10 @@ import { routes } from '@redwoodjs/router'
 import { useAuth } from 'src/auth'
 
 const Login = () => {
-  const { loading, logIn, isAuthenticated, userMetadata } = useAuth()
+  const { loading, logIn, isAuthenticated, userMetadata, signUp } = useAuth()
 
   const handleLogin = async () => {
-    logIn()
+    signUp()
       .then(() => {
         console.log({ userMetadata })
       })

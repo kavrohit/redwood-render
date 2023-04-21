@@ -4,11 +4,11 @@ import Login from "src/components/Login/Login"
 import Profile from 'src/components/Profile/Profile'
 
 const HomePage = () => {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, loading } = useAuth()
   return (
     <div>
       <Login />
-      {isAuthenticated && <Profile />}
+      {!loading && isAuthenticated && <Profile />}
     </div>
   )
 }
