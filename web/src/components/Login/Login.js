@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid'
+// import { v4 as uuidv4 } from 'uuid'
 
 import { Redirect } from '@redwoodjs/router'
 import { routes } from '@redwoodjs/router'
@@ -9,8 +9,7 @@ const Login = () => {
   const { loading, logIn, isAuthenticated, userMetadata } = useAuth()
 
   const handleLogin = async () => {
-    const state = uuidv4()
-    logIn({ state })
+    logIn()
       .then(() => {
         console.log({ userMetadata })
       })
@@ -24,7 +23,7 @@ const Login = () => {
   }
   return (
     <div>
-      {isAuthenticated ? (
+      {!loading && isAuthenticated ? (
         <Redirect to={routes.profile()} options={{ replace: true }} />
       ) : (
         <button onClick={handleLogin}>Log In</button>
