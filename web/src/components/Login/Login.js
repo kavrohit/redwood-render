@@ -1,16 +1,15 @@
 import { Redirect } from '@redwoodjs/router'
 import { routes } from '@redwoodjs/router'
-import { navigate } from '@redwoodjs/router'
 
 import { useAuth } from 'src/auth'
 
 const Login = () => {
-  const { loading, logIn, isAuthenticated } = useAuth()
+  const { loading, logIn, isAuthenticated, userMetadata } = useAuth()
 
   const handleLogin = async () => {
     logIn()
       .then(() => {
-        navigate('/')
+        console.log({ userMetadata })
       })
       .catch((error) => {
         console.log({ error })
