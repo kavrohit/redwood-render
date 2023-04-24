@@ -26,7 +26,9 @@ const Login = () => {
       {!loading && isAuthenticated ? (
         <Redirect to={routes.profile()} options={{ replace: true }} />
       ) : (
-        <button onClick={handleLogin}>Log In</button>
+        <div>
+          <button onClick={handleLogin}>Log In</button>
+        </div>
       )}
     </div>
   )
