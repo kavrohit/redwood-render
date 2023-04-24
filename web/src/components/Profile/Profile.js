@@ -10,7 +10,7 @@ const Profile = () => {
     <>
       {userMetadata ? (
         <div>
-          <h1>{userMetadata.name}</h1>
+          <h1>Name:{userMetadata.name}</h1>
           <p>Email:{userMetadata.email}</p>
           <img src={userMetadata.picture} alt="User Avtar" />
         </div>
