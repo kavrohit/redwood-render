@@ -48,7 +48,4 @@ services:
     value: 16
   - key: DATABASE_URL
     value: file:./data/sqlite.db
-  disk:
-    name: sqlite-data
-    mountPath: /opt/render/project/src/api/db/data
-    sizeGB: 1
+

@@ -8,7 +8,7 @@ const Callback = () => {
 
   useEffect(() => {
     logIn().then(() => {
-      navigate(routes.())
+      navigate('/')
     })
   }, [])
 
