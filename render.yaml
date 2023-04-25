@@ -15,6 +15,14 @@ services:
     value: 16
   - key: SKIP_INSTALL_DEPS
     value: true
+    - key: AUTH0_DOMAIN
+    value: dev-qcdzvwp1msiezidl.us.auth0.com
+    - key: AUTH0_CLIENT_ID
+    value: q7L2EH7FIedsIUNnzw3h9OJCe2NuDNZf
+    - key: AUTH0_REDIRECT_URI
+    value: https://redwood-sample-web.onrender.com/
+    - key: AUTH0_AUDIENCE
+    value: https://dev-qcdzvwp1msiezidl.us.auth0.com/api/v2/
   routes:
   - type: rewrite
     source: /.redwood/functions/*
@@ -40,4 +48,3 @@ services:
     value: 17
   - key: DATABASE_URL
     value: file:./data/sqlite.db
-
