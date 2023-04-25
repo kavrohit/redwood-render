@@ -8,9 +8,9 @@ import HomePage from './pages/HomePage/HomePage'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
-      <Route path="/" page={HomePage} name="home" />
+      <Route path="/" page={HomePage} name="home" prerender />
       <Route path="/login" page={AuthPage} name="login" />
-      <Route path="/profile" page={Profile} name="profile" />
+      <Route path="/profile" page={Profile} name="profile" prerender />
     </Router>
   )
 }
