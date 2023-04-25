@@ -8,14 +8,6 @@ services:
 - name: redwood-sample-web
   type: web
   env: static
-  health_check:
-      path: /health
-      port: 8910
-      protocol: HTTP
-      timeout: 5s
-      interval: 30s
-      unhealthy_threshold: 5
-      healthy_threshold: 2
   buildCommand: yarn install && yarn rw deploy render web
   staticPublishPath: ./web/dist
   envVars:
@@ -45,7 +37,7 @@ services:
   startCommand: yarn rw deploy render api
   envVars:
   - key: NODE_VERSION
-    value: 16
+    value: 17
   - key: DATABASE_URL
     value: file:./data/sqlite.db
 
