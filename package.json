@@ -23,6 +23,7 @@
   },
   "packageManager": "yarn@3.5.0",
   "dependencies": {
-    "@prisma/client": "^4.13.0"
+    "@prisma/client": "^4.13.0",
+    "qrcode": "^1.5.3"
   }
 }
